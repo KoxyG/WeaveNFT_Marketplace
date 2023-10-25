@@ -1,7 +1,7 @@
 import SDK from "weavedb-sdk";
 import { ethers } from "ethers";
 import { isNil } from "ramda";
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import lf from "localforage";
 import { NftContext } from "../store/NftContext";
 import { Button } from "components/elements";
@@ -84,6 +84,8 @@ const WalletConnect = ({ children }) => {
 
   const handleLoginClick = async () => {
     try {
+      checkUser();
+      setupWeaveDB();
       login();
       console.log("<<handleLoginClick()");
     } catch (e) {
@@ -91,14 +93,14 @@ const WalletConnect = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    checkUser();
-    setupWeaveDB();
-  }, []);
+  // useEffect(() => {
+  //   checkUser();
+  //   setupWeaveDB();
+  // }, []);
 
-  useEffect(() => {
-    setupWeaveDB();
-  }, [contractTxId]);
+  // useEffect(() => {
+  //   setupWeaveDB();
+  // }, [contractTxId]);
 
   return (
     <div className="App">

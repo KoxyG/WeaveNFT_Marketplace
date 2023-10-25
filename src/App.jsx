@@ -7,22 +7,22 @@ import { NFTDetails, detailsLoader } from "pages/Details";
 import Artist from "pages/Artist";
 import Explore from "pages/Explore";
 import Footer from "components/Footer";
-import { useState,  useEffect } from "react";
+// import { useState,  useEffect } from "react";
 
 
 import "./App.css";
-import Preloader from "components/pre";
+// import Preloader from "components/pre";
 
 export default function App() {
-  const [load, upadateLoad] = useState(true);
+  // const [load, upadateLoad] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     upadateLoad(false);
+  //   }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
 
   
@@ -44,10 +44,11 @@ export default function App() {
 
   return (
     <div className="app">
-       {load ? <Preloader /> : null}
-       <div className={`${load ? 'hidden' : ''}`}>
-        <RouterProvider router={router} />
-      </div>
+       {/* {load ? <Preloader /> : null} */}
+       {/* <div className={`${load ? 'hidden' : ''}`}>
+       
+      </div> */}
+      <RouterProvider router={router} />
     </div>
   );
 }

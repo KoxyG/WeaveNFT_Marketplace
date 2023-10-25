@@ -187,13 +187,8 @@ export default function Create(props) {
       try {
         // Do something with the form data
         setLoading(true);
-        
-    
-        
-       
         const bundlrUploadUrl = await handlrBundlrUpload(fileUrl);
         const tokenID  = await  handleCreateListing(price, totalShares)
-        
         console.log(tokenID)
         await handleNft_details(tokenID, bundlrUploadUrl)
         
