@@ -8,12 +8,12 @@ import { NftContext } from "../store/NftContext";
 import { useParams } from "react-router-dom";
 import Modal from "../components/elements/Modal/modal";
 import React, { useEffect, useState } from "react";
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 
 const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
-const db = new SDK({ contractTxId: contractTxId });
-await db.init();
-const Nft = await db.get("NFT_COLLECTION")
+// const db = new SDK({ contractTxId: contractTxId });
+// await db.init();
+// const Nft = await db.get("NFT_COLLECTION")
 
 export const NFTDetails = () => {
 
@@ -25,8 +25,8 @@ export const NFTDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const db = new SDK({ contractTxId: contractTxId });
-        const details = await detailsLoader(db);
+        // const db = new SDK({ contractTxId: contractTxId });
+        // const details = await detailsLoader(db);
         console.log("nftData:", details); // Log the fetched data
         if (!details) {
           throw new Error("Failed to fetch data");
@@ -172,7 +172,7 @@ export const NFTDetails = () => {
         <div className="flex flex-col gap-8">
           <Typography type="h6">More from this creator</Typography>
           <div className="grid grid-cols-1 lg:grid-cols-2 laptop:grid-cols-3 gap-5">
-            {Nft.slice(0, 3).map((nft) => (
+            {/* {Nft.slice(0, 3).map((nft) => (
               <NftProps
                 tokenID={nft.tokenID}
                 uploadUrl={nft.uploadUrl}
@@ -181,7 +181,7 @@ export const NFTDetails = () => {
                 totalShares={nft.totalShares}
                 price={nft.price}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

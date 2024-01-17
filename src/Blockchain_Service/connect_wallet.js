@@ -1,4 +1,4 @@
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 import { ethers } from "ethers";
 import { isNil } from "ramda";
 import React, { useContext} from "react";
@@ -27,16 +27,16 @@ const WalletConnect = ({ children }) => {
   };
 
   const setupWeaveDB = async () => {
-    try {
-      const _db = new SDK({
-        contractTxId: contractTxId,
-      });
-      await _db.initializeWithoutWallet();
-      setDb(_db);
-      setInitDb(true);
-    } catch (e) {
-      console.error("setupWeaveDB", e);
-    }
+    // try {
+    //   const _db = new SDK({
+    //     contractTxId: contractTxId,
+    //   });
+    //   await _db.initializeWithoutWallet();
+    //   setDb(_db);
+    //   setInitDb(true);
+    // } catch (e) {
+    //   console.error("setupWeaveDB", e);
+    // }
   };
 
   const login = async () => {
@@ -85,7 +85,7 @@ const WalletConnect = ({ children }) => {
   const handleLoginClick = async () => {
     try {
       checkUser();
-      setupWeaveDB();
+      // setupWeaveDB();
       login();
       console.log("<<handleLoginClick()");
     } catch (e) {

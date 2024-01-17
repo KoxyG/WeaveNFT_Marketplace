@@ -1,7 +1,7 @@
 import { useDropzone } from "react-dropzone";
 import { useContext, useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 import "react-toastify/dist/ReactToastify.css";
 import { NftContext } from "../store/NftContext";
 import fileReaderStream from "filereader-stream";
@@ -24,7 +24,7 @@ export default function Create(props) {
   const { setModal} = useContext(NftContext);
 
   const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
-  const db = new SDK({ contractTxId: contractTxId });
+  // const db = new SDK({ contractTxId: contractTxId });
 
   //function for adding image to input
 
@@ -113,12 +113,12 @@ export default function Create(props) {
       totalShares: Number(totalShares),
     };
 
-    await db.init();
+    // await db.init();
 
     try {
-      const res = await db.add(nft_details, "NFT_COLLECTION");
+      // const res = await db.add(nft_details, "NFT_COLLECTION");
       console.log("docId", docId);
-      console.log(res);
+      // console.log(res);
     } catch (e) {
       console.error(e);
     }

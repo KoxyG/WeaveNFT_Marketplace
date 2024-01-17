@@ -1,14 +1,14 @@
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 import { WeaveMarketAbi } from "../lib/marketplace";
 import { mintingAbi } from "../lib/minting";
-import { WebBundlr } from "@bundlr-network/client";
+// import { WebBundlr } from "@bundlr-network/client";
 import { ethers, Contract } from "ethers";
 
 
 
-const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
-const db = new SDK({ contractTxId: contractTxId });
-await db.init();
+// const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
+// // const db = new SDK({ contractTxId: contractTxId });
+// await db.init();
 
 const MintingAdrs = "0x73d7530D4BBD9AC1640600E839C3B9E932830915";
 const MarketplaceAdrs = "0x703e8f41112DBa933494B4327a4d746f334ab24E";
@@ -96,9 +96,9 @@ const getBundlr = async () => {
   
     //   signer._signTypedData = (domain, types, value) => signer.signTypedData(domain, types, value);
   
-    const bundlr = new WebBundlr("https://devnet.bundlr.network/", "matic", provider, {
-      providerUrl: "https://rpc-mumbai.maticvigil.com/",
-    });
+    // const bundlr = new WebBundlr("https://devnet.bundlr.network/", "matic", provider, {
+    //   providerUrl: "https://rpc-mumbai.maticvigil.com/",
+    // });
   
     //   bundlr.currencyConfig.createTx = async (amount, to) => {
     //     const estimatedGas = await signer.estimateGas({ to, from: bundlr.address, amount });
@@ -113,10 +113,10 @@ const getBundlr = async () => {
     //     });
     //     return { txId: undefined, tx: txr };
     //   };
-    await bundlr.ready();
-    console.log("bundlr=", bundlr);
+    // await bundlr.ready();
+    // console.log("bundlr=", bundlr);
   
-    return bundlr; // done
+    // return bundlr; // done
   };
 
 

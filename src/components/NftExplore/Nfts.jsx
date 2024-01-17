@@ -4,12 +4,12 @@ import NftProps from "./NftProps";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import NftCollection from "./Header/NftCollection";
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 
 const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
-const db = new SDK({ contractTxId: contractTxId });
-await db.init();
-const Nft = await db.get("NFT_COLLECTION")
+// const db = new SDK({ contractTxId: contractTxId });
+// await db.init();
+// const Nft = await db.get("NFT_COLLECTION")
 
 export default function Nfts() {
   
@@ -26,7 +26,7 @@ export default function Nfts() {
               spaceBetween={1}
               loop={true}
             >
-              {Nft.map((nft) => (
+              {/* {Nft.map((nft) => (
                 <SwiperSlide key={nft.tokenID}>
                   <Link to={`/explore/nft/${nft.tokenID}`}>
                     <NftProps
@@ -39,7 +39,7 @@ export default function Nfts() {
                     />
                   </Link>
                 </SwiperSlide>
-              ))}
+              ))} */}
             </CustomSwiper>
           </div>
         </div>

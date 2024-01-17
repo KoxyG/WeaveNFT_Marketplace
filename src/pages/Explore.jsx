@@ -5,12 +5,12 @@ import { ReactComponent as Grid2 } from "assets/icons/grid2.svg";
 import ToggleButtonGroup, { ToggleButton } from "components/elements/ToggleButton";
 import { filterMode } from "constant";
 import classNames from "classnames";
-import SDK from "weavedb-sdk";
+// import SDK from "weavedb-sdk";
 
-const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
-const db = new SDK({ contractTxId: contractTxId });
-await db.init();
-const Nft = await db.get("NFT_COLLECTION")
+// const contractTxId = "U2OR33r74nnR1C3alI-JEpbRqSisAiKIEbXECgaJSyA";
+// const db = new SDK({ contractTxId: contractTxId });
+// await db.init();
+// const Nft = await db.get("NFT_COLLECTION")
 
 
 export default function Explore () {
@@ -48,7 +48,7 @@ export default function Explore () {
           "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5": grid === 5,
         })}
       >
-        {Nft.map((nft) => (
+        {/* {Nft.map((nft) => (
           <NFTCard
             key={nft.tokenID}
             uploadUrl={nft.uploadUrl}
@@ -58,7 +58,7 @@ export default function Explore () {
             totalShares={nft.totalShares}
             size="sm"
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
